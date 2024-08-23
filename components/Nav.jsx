@@ -26,22 +26,24 @@ const Nav = () => {
   const pathname = usePathname();
   console.log(pathname);
   return (
-    <nav className="flex gap-8">
-      {links.map((link, index) => {
-        return (
-          <Link
-            href={link.path}
-            key={index}
-            className={`${
-              link.path === pathname &&
-              "text-green-500 border-b-2 boarder-accent"
-            } capitalize font-medium hover:text-green-500 transition-all`}
-          >
-            {link.name}
-          </Link>
-        );
-      })}
-    </nav>
+    <div className="w-full flex justify-center bg-black p-4 shadow-lg">
+      <nav className="flex gap-7 rounded-lg">
+        {links.map((link, index) => {
+          return (
+            <Link
+              href={link.path}
+              key={index}
+              className={`${
+                link.path === pathname &&
+                "text-green-500 border-b-2 boarder-green-500"
+              } capitalize font-medium hover:text-green-500 transition-all`}
+            >
+              {link.name}
+            </Link>
+          );
+        })}
+      </nav>
+    </div>
   );
 };
 

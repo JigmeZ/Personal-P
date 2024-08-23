@@ -20,7 +20,8 @@ const reverseIndex = (index) => {
 const Stairs = () => {
   return (
     <>
-      {[...Array(6)].map((_, index) => {
+      {[...Array(10)].map((_, index) => {
+        return (
         <motion.div
           key={index}
           variants={stairsAnimation}
@@ -32,8 +33,9 @@ const Stairs = () => {
             ease: "easeInOut",
             delay: reverseIndex(index) * 0.1,
           }}
-          className="h-full w-full bg-green relative"
-        />;
+          className="h-full w-full bg-green-50 relative"
+        />
+        );
       })}
     </>
   );
