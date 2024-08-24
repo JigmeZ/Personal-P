@@ -3,11 +3,11 @@ import { Button } from "@/components/ui/button";
 import { FiDownload } from "react-icons/fi";
 import Social from "@/components/social";
 import Photo from "@/components/Photo";
-
+import Stats from "@/components/Stats";
 
 const Home = () => {
   return (
-    <div className="h-full">
+    <section className="h-full">
       <div className="container mx-auto h-full">
         <div className="flex flex-col xl:flex-row justify-between xl:pt-8 xl:pb-24">
           <div className="xl:text-left">
@@ -35,6 +35,7 @@ const Home = () => {
                 justify-center items-center text-white text-base hover:bg-green
                 hover:text-primary hover:transition-all duration-500"
               />
+              <Stats />
             </div>
           </div>
 
@@ -43,7 +44,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
