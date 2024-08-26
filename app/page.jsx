@@ -16,8 +16,7 @@ const Home = () => {
               <span className="text-green-500">&lt;I am Tashi Penjor/&gt;</span>
             </h2>
             <p className="max-w-[500px] mb-9">
-              I am a{" "}
-              <span className="text-green-500">Software Engineering</span>{" "}
+              I am a <span className="text-green-500">Software Engineering</span>{" "}
               student that welcomes
               <span> challenges and architect solutions.</span>
             </p>
