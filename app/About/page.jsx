@@ -71,7 +71,6 @@ const skills = {
     },
   ],
 };
-
 const about = {
   title: "About me",
   Description: (
