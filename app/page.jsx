@@ -8,19 +8,19 @@ import Stats from "@/components/Stats";
 const Home = () => {
   return (
     <section className="h-full">
-      <div className="container mx-auto h-full">
+      <div className="container mx-auto h-full px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col xl:flex-row justify-between xl:pt-8 xl:pb-24">
-          <div className="xl:text-left">
+          <div className="text-center xl:text-left flex flex-col items-center xl:items-start">
             <h1 className="h1">Hi There!</h1>
             <h2 className="h2">
               <span className="text-green-500">&lt;I am Tashi Penjor/&gt;</span>
             </h2>
-            <p className="max-w-[500px] mb-9">
+            <p className="max-w-[500px] mb-9 text-center xl:text-left">
               I am a <span className="text-green-500">Software Engineering</span>{" "}
               student that welcomes
               <span> challenges and architect solutions.</span>
             </p>
-            <div className="flex items-center gap-2 mb-8 xl:mb-0">
+            <div className="flex flex-col sm:flex-row items-center gap-2 mb-8 xl:mb-0">
               <a href="/Resume.pdf" target="_blank" rel="noopener noreferrer">
                 <Button
                   className="text-sm py-2 px-4 bg-opacity-50 bg-black-500 border border-green-500 
@@ -31,16 +31,16 @@ const Home = () => {
                 </Button>
               </a>
               <Social
-                containerStyles="flex gap-6"
+                containerStyles="flex gap-6 mt-4 sm:mt-0"
                 iconStyles="w-7 h-7 border border-green-500 rounded-full flex
                 justify-center items-center text-white text-base hover:bg-green
                 hover:text-primary hover:transition-all duration-500"
               />
-              <Stats />
+              <Stats className="mt-4 sm:mt-0" />
             </div>
           </div>
 
-          <div className="mt-[-100px] order-1 xl:order-none mb-8 xl:mb-0">
+          <div className="mt-8 xl:mt-0 order-1 xl:order-none mb-8 xl:mb-0 flex justify-center xl:justify-end">
             <Photo />
           </div>
         </div>
