@@ -77,25 +77,19 @@ const about = {
   Description: (
     <>
       <p>
-        It's all about me and my journey—sharing my passions, experiences, and
-        the values that drive me. Join me as I explore my interests, goals, and
-        the stories that shape who I am
+        It&apos;s all about me and my journey—sharing my passions, experiences, and the values that drive me. Join me as I explore my interests, goals, and the stories that shape who I am.
       </p>
-
       <p className="para1">
         A dedicated, results-driven and passionate individual with a strong
-        academic background and extensive professional experience. I have a
-        genuine enthusiasm for software engineering and a proven ability to
-        learn and adapt quickly. I am eager to contribute my diverse skill set
-        and collaborative mindset to a dynamic software engineering program at
-        the College of Science and Technology.
+        academic background, extensive professional experience and a genuine enthusiasm for software
+        engineering. With a proven ability to learn and adapt quickly. I am eager to contribute my
+        diverse skills set and collaborative mindset to a dynamic software engineering program at
+        College of Science and Technology.
       </p>
       <p className="para2">
-        Ever since I wrote my first "Hello World" program, I have been hooked on
-        the magic of coding. As I delved deeper into the world of software
-        development, I found myself drawn to the elegant solutions that code can
-        offer to complex problems. It's like being a digital magician, conjuring
-        solutions out of thin air.
+        Ever since I wrote my first &quot;Hello World&quot; program, I was hooked on the
+        magic of coding. As I delved deeper into the world of software development, I found
+        myself drawn to the elegant solutions that code can offer to complex problems. It&apos;s like
       </p>
     </>
   ),
