@@ -9,7 +9,7 @@ const statsData = [
   },
 
   {
-    num: 10,
+    num: 12,
     text: "Software Used",
   },
 ];

@@ -22,13 +22,15 @@ const Home = () => {
               <span> challenges and architect solutions.</span>
             </p>
             <div className="flex items-center gap-2 mb-8 xl:mb-0">
-              <Button
-                className="text-sm py-2 px-4 bg-opacity-50 bg-black-500 border border-green-500 
+              <a href="/Resume.pdf" target="_blank" rel="noopener noreferrer">
+                <Button
+                  className="text-sm py-2 px-4 bg-opacity-50 bg-black-500 border border-green-500 
                 hover:border-green-500 active:bg-green-500 transition-all duration-300"
-              >
-                <span>Download CV</span>
-                <FiDownload className="text-xl ml-2" />
-              </Button>
+                >
+                  <span>View CV</span>
+                  <FiDownload className="text-xl ml-2" />
+                </Button>
+              </a>
               <Social
                 containerStyles="flex gap-6"
                 iconStyles="w-7 h-7 border border-green-500 rounded-full flex
