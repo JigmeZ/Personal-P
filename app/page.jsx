@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { FiDownload } from "react-icons/fi";
@@ -9,8 +10,9 @@ const Home = () => {
   return (
     <section className="h-full">
       <div className="container mx-auto h-full px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col xl:flex-row justify-between xl:pt-8 xl:pb-24">
-          <div className="text-center xl:text-left flex flex-col items-center xl:items-start">
+        <div className="flex flex-col-reverse xl:flex-row justify-between xl:pt-8 xl:pb-24">
+          {/* Text section */}
+          <div className="text-center xl:text-left flex flex-col items-center xl:items-start order-none xl:order-1">
             <h1 className="h1">Hi There!</h1>
             <h2 className="h2">
               <span className="text-green-500">&lt;I am Tashi Penjor/&gt;</span>
@@ -39,8 +41,8 @@ const Home = () => {
               <Stats className="mt-4 sm:mt-0" />
             </div>
           </div>
-
-          <div className="mt-8 xl:mt-0 order-1 xl:order-none mb-8 xl:mb-0 flex justify-center xl:justify-end">
+          {/* Photo section */}
+          <div className="order-1 xl:order-none mb-8 xl:mb-0 flex justify-center xl:justify-end -mt-20">
             <Photo />
           </div>
         </div>
