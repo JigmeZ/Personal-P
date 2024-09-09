@@ -4,7 +4,7 @@ import CountUp from "react-countup";
 
 const statsData = [
   {
-    num: 311,
+    num: 315,
     text: "Code Commited",
   },
 
