@@ -9,7 +9,7 @@ const Home = () => {
   return (
     <section className="h-full">
       <div className="container mx-auto h-full px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col-reverse xl:flex-row justify-between xl:pt-8 xl:pb-24">AS
+        <div className="flex flex-col-reverse xl:flex-row justify-between xl:pt-8 xl:pb-24">
           <div className="text-center xl:text-left flex flex-col items-center xl:items-start order-none xl:order-1">
             <h1 className="h1">Hi There!</h1>
             <h2 className="h2">
