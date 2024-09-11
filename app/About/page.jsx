@@ -22,51 +22,143 @@ const skills = {
     "The skills I’ve learned, ranging from technical expertise to soft skills, showcasing my growth and adaptability over this period",
   skilllist: [
     {
-      icon: <FaHtml5 />,
+      icon: (
+        <a
+          href="https://www.w3schools.com/html/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaHtml5 />
+        </a>
+      ),
       name: "Html",
     },
     {
-      icon: <FaCss3Alt />,
+      icon: (
+        <a
+          href="https://www.w3schools.com/css/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaCss3Alt />
+        </a>
+      ),
       name: "CSS",
     },
     {
-      icon: <FaJs />,
+      icon: (
+        <a
+          href="https://www.w3schools.com/js/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaJs />
+        </a>
+      ),
       name: "Javascript",
     },
     {
-      icon: <FaNodeJs />,
+      icon: (
+        <a
+          href="https://nodejs.org/en"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaNodeJs />
+        </a>
+      ),
       name: "Node.js",
     },
     {
-      icon: <FaReact />,
+      icon: (
+        <a href="https://react.dev/" target="_blank" rel="noopener noreferrer">
+          <FaReact />
+        </a>
+      ),
       name: "React.js",
     },
     {
-      icon: <FaDatabase />,
+      icon: (
+        <a
+          href="https://www.geeksforgeeks.org/what-is-database/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaDatabase />
+        </a>
+      ),
       name: "Database",
     },
     {
-      icon: <FaFigma />,
+      icon: (
+        <a
+          href="https://www.figma.com/downloads/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaFigma />
+        </a>
+      ),
       name: "Figma",
     },
     {
-      icon: <FaDocker />,
+      icon: (
+        <a
+          href="https://www.docker.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaDocker />
+        </a>
+      ),
       name: "Docker",
     },
     {
-      icon: <SiTailwindcss />,
+      icon: (
+        <a
+          href="https://tailwindcss.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <SiTailwindcss />
+        </a>
+      ),
       name: "Tailwind.css",
     },
     {
-      icon: <SiNextdotjs />,
+      icon: (
+        <a
+          href="https://tailwindcss.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+      <SiNextdotjs />
+      </a>
+      ),
       name: "Next.js",
     },
     {
-      icon: <SiPostman />,
+      icon: (
+        <a
+          href="https://www.postman.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+      <SiPostman />
+      </a>
+      ),
       name: "Postman",
     },
     {
-      icon: <SiPrisma />,
+      icon: (
+        <a
+          href="https://www.prisma.io/"
+          target="_blank"
+          rel="noopener noreferrer"
+      >
+      <SiPrisma />
+      </a>
+      ),
       name: "Prisma",
     },
   ],
