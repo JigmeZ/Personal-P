@@ -4,7 +4,7 @@ import CountUp from "react-countup";
 
 const statsData = [
   {
-    num: 315,
+    num: 271,
     text: "Code Commited",
   },
 
@@ -29,7 +29,7 @@ const Stats = () => {
                   end={item.num}
                   duration={5}
                   delay={2}
-                  className="text-2xl xl:text-4xl font-bold text-green-500 "
+                  className="text-2xl xl:text-4xl font-bold text-purple-950 "
                 />
                 <p
                   className={`${

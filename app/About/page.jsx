@@ -16,6 +16,31 @@ import {
   SiPrisma,
 } from "react-icons/si";
 
+const achievemnt = {
+  title: "My Achievements",
+  Description:
+    "A collection of my achievements, showcasing my dedication and accomplishments in various fields over the past two years.",
+  achievemntList: [
+    {
+      title: "Vice President, Changjiji Youth Center (CYC)",
+      date: "Jan 2023 – Dec 2024",
+      description:
+        "Led and coordinated community outreach and youth engagement activities impacting over 100 local youths. Organized educational events, mentored junior members, and strengthened leadership and team management skills.",
+    },
+    {
+      title: "Personal Portfolio Website Project",
+      date: "July 2024 – Dec 2024",
+      description:
+        "Created and maintained a responsive personal portfolio website using HTML, CSS, and JavaScript. Published on GitHub Pages, managed the full project lifecycle, and showcased personal branding and technical abilities.",
+    },
+    {
+      title: "Team Lead – HoYoLAB Clone Group Project",
+      date: "Feb 2025 – July 2025",
+      description:
+        "Led a team of 3 to recreate core HoYoLAB features using React and Vite. Implemented reusable components, managed state, established GitFlow, and deployed the project on Render.com.",
+    },
+  ],
+};
 const skills = {
   title: "My skills",
   Description:
@@ -132,8 +157,8 @@ const skills = {
           target="_blank"
           rel="noopener noreferrer"
         >
-      <SiNextdotjs />
-      </a>
+          <SiNextdotjs />
+        </a>
       ),
       name: "Next.js",
     },
@@ -144,8 +169,8 @@ const skills = {
           target="_blank"
           rel="noopener noreferrer"
         >
-      <SiPostman />
-      </a>
+          <SiPostman />
+        </a>
       ),
       name: "Postman",
     },
@@ -155,9 +180,9 @@ const skills = {
           href="https://www.prisma.io/"
           target="_blank"
           rel="noopener noreferrer"
-      >
-      <SiPrisma />
-      </a>
+        >
+          <SiPrisma />
+        </a>
       ),
       name: "Prisma",
     },
@@ -168,31 +193,31 @@ const about = {
   Description: (
     <>
       <p>
-        It&apos;s all about me and my journey sharing my passions, experiences,
-        and the values that drive me. Join me as I explore my interests, goals,
-        and the stories that shape who I am.
+        Discover more about my background, passions, and the principles that
+        guide me. Here, I share my journey, interests, aspirations, and the
+        experiences that have shaped my identity.
       </p>
       <p className="para1">
-        A dedicated, results-driven and passionate individual with a strong
-        academic background, extensive professional experience and a genuine
-        enthusiasm for software engineering. With a proven ability to learn and
-        adapt quickly. I am eager to contribute my diverse skills set and
-        collaborative mindset to a dynamic software engineering program at
-        College of Science and Technology.
+        I am a committed, results-oriented, and enthusiastic individual with a
+        solid academic foundation and broad professional experience. My genuine
+        passion for software engineering, combined with a proven ability to
+        learn and adapt swiftly, drives me to contribute my diverse skill set
+        and collaborative approach to a dynamic software engineering program at
+        the College of Science and Technology.
       </p>
       <p className="para2">
-        Ever since I wrote my first &quot;Hello World&quot; program, I was
-        hooked on the magic of coding. As I delved deeper into the world of
-        software development, I found myself drawn to the elegant solutions that
-        code can offer to complex problems. It&apos;s like being a digital
-        magician, conjuring solutions out of thin air.
+        From the moment I created my first &quot;Hello World&quot; program, I
+        was captivated by the world of coding. As I explored software
+        development further, I became fascinated by how code can provide elegant
+        solutions to complex challenges. It feels like being a digital creator,
+        crafting solutions from imagination.
       </p>
     </>
   ),
   info: [
     {
       filedName: "Name",
-      filedValue: "Tashi Penjor",
+      filedValue: "Jigme Ngawang Chogyal",
     },
     {
       filedName: "Studies",
@@ -204,15 +229,15 @@ const about = {
     },
     {
       filedName: "Address",
-      filedValue: "Chukha,Gedu",
+      filedValue: "Thimphu, Bhutan",
     },
     {
       filedName: "Phone Number",
-      filedValue: "+97577277619",
+      filedValue: "+97517992006",
     },
     {
       filedName: "Email",
-      filedValue: "02230306.cst@rub.edu.bt",
+      filedValue: "02240344.cst@rub.edu.bt",
     },
   ],
 };
@@ -246,6 +271,7 @@ const About = () => {
           <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
             <TabsTrigger value="skills">Skills</TabsTrigger>
             <TabsTrigger value="about">About Me</TabsTrigger>
+            <TabsTrigger value="achievemnt">Achievement</TabsTrigger>
           </TabsList>
 
           <div className="min-h-[70vh] w-full">
@@ -264,7 +290,7 @@ const About = () => {
                         <TooltipProvider delayDuration={100}>
                           <Tooltip>
                             <TooltipTrigger className="w-full h-[100px] rounded-xl flex justify-center items-center group">
-                              <div className="text-5xl group-hover:text-green-500 transition-all duration-300">
+                              <div className="text-5xl group-hover:text-purple-900 transition-all duration-300">
                                 {skill.icon}
                               </div>
                             </TooltipTrigger>
@@ -283,23 +309,54 @@ const About = () => {
               value="about"
               className="w-full text-center xl:text-left"
             >
-              <div className="flex flex-col gap-[30px]">
-                <h3 className="text-4xl font-bold">{about.title}</h3>
-                <p className="max-w-[600px] text-white/60 ma-auto xl:mx-0">
+              <div className="flex flex-col gap-[24px]">
+                <h3 className="text-2xl font-bold text-purple-900">
+                  {about.title}
+                </h3>
+                <div className="max-w-[600px] mx-auto xl:mx-0 text-base text-white/60 font-normal leading-snug font-sans">
                   {about.Description}
-                </p>
-                <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0">
+                </div>
+                <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-4 max-w-[620px] mx-auto xl:mx-0">
                   {about.info.map((item, index) => {
                     return (
                       <li
                         key={index}
-                        className="flex items-center justify-center xl:justify-start gap-4"
+                        className="flex items-center justify-center xl:justify-start gap-2 border-l-4 border-purple-900 pl-3"
                       >
-                        <span className="text-green-500">{item.filedName}</span>
-                        <span className="text-l">{item.filedValue}</span>
+                        <span className="text-purple-900 font-semibold text-sm">
+                          {item.filedName}
+                        </span>
+                        <span className="text-sm text-white/80">
+                          {item.filedValue}
+                        </span>
                       </li>
                     );
                   })}
+                </ul>
+              </div>
+            </TabsContent>
+            <TabsContent
+              value="achievemnt"
+              className="w-full text-center xl:text-left"
+            >
+              <div className="flex flex-col gap-[30px]">
+                <h3 className="text-4xl font-bold">{achievemnt.title}</h3>
+                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                  {achievemnt.Description}
+                </p>
+                <ul className="flex flex-col gap-6 max-w-[620px] mx-auto xl:mx-0">
+                  {achievemnt.achievemntList.map((item, index) => (
+                    <li
+                      key={index}
+                      className="flex flex-col items-start gap-2 border-l-4 border-purple-900 pl-4"
+                    >
+                      <span className="text-lg font-semibold text-purple-900">
+                        {item.title}
+                      </span>
+                      <span className="text-sm text-white/60">{item.date}</span>
+                      <span className="text-base">{item.description}</span>
+                    </li>
+                  ))}
                 </ul>
               </div>
             </TabsContent>
