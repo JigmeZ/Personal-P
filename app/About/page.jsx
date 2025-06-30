@@ -16,6 +16,22 @@ import {
   SiPrisma,
 } from "react-icons/si";
 
+import {
+  Tabs,
+  TabsContent,
+  TabsList,
+  TabsTrigger,
+} from "@/components/ui/tabs";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+import { motion } from "framer-motion";
+
+// ---------------- Data ----------------
+
 const achievemnt = {
   title: "My Achievements",
   Description:
@@ -41,153 +57,27 @@ const achievemnt = {
     },
   ],
 };
+
 const skills = {
   title: "My skills",
   Description:
     "The skills I’ve learned, ranging from technical expertise to soft skills, showcasing my growth and adaptability over this period",
   skilllist: [
-    {
-      icon: (
-        <a
-          href="https://www.w3schools.com/html/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FaHtml5 />
-        </a>
-      ),
-      name: "Html",
-    },
-    {
-      icon: (
-        <a
-          href="https://www.w3schools.com/css/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FaCss3Alt />
-        </a>
-      ),
-      name: "CSS",
-    },
-    {
-      icon: (
-        <a
-          href="https://www.w3schools.com/js/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FaJs />
-        </a>
-      ),
-      name: "Javascript",
-    },
-    {
-      icon: (
-        <a
-          href="https://nodejs.org/en"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FaNodeJs />
-        </a>
-      ),
-      name: "Node.js",
-    },
-    {
-      icon: (
-        <a href="https://react.dev/" target="_blank" rel="noopener noreferrer">
-          <FaReact />
-        </a>
-      ),
-      name: "React.js",
-    },
-    {
-      icon: (
-        <a
-          href="https://www.geeksforgeeks.org/what-is-database/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FaDatabase />
-        </a>
-      ),
-      name: "Database",
-    },
-    {
-      icon: (
-        <a
-          href="https://www.figma.com/downloads/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FaFigma />
-        </a>
-      ),
-      name: "Figma",
-    },
-    {
-      icon: (
-        <a
-          href="https://www.docker.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FaDocker />
-        </a>
-      ),
-      name: "Docker",
-    },
-    {
-      icon: (
-        <a
-          href="https://tailwindcss.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <SiTailwindcss />
-        </a>
-      ),
-      name: "Tailwind.css",
-    },
-    {
-      icon: (
-        <a
-          href="https://tailwindcss.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <SiNextdotjs />
-        </a>
-      ),
-      name: "Next.js",
-    },
-    {
-      icon: (
-        <a
-          href="https://www.postman.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <SiPostman />
-        </a>
-      ),
-      name: "Postman",
-    },
-    {
-      icon: (
-        <a
-          href="https://www.prisma.io/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <SiPrisma />
-        </a>
-      ),
-      name: "Prisma",
-    },
+    { icon: <FaHtml5 />, name: "Html", link: "https://www.w3schools.com/html/" },
+    { icon: <FaCss3Alt />, name: "CSS", link: "https://www.w3schools.com/css/" },
+    { icon: <FaJs />, name: "Javascript", link: "https://www.w3schools.com/js/" },
+    { icon: <FaNodeJs />, name: "Node.js", link: "https://nodejs.org/en" },
+    { icon: <FaReact />, name: "React.js", link: "https://react.dev/" },
+    { icon: <FaDatabase />, name: "Database", link: "https://www.geeksforgeeks.org/what-is-database/" },
+    { icon: <FaFigma />, name: "Figma", link: "https://www.figma.com/downloads/" },
+    { icon: <FaDocker />, name: "Docker", link: "https://www.docker.com/" },
+    { icon: <SiTailwindcss />, name: "Tailwind.css", link: "https://tailwindcss.com/" },
+    { icon: <SiNextdotjs />, name: "Next.js", link: "https://nextjs.org/" },
+    { icon: <SiPostman />, name: "Postman", link: "https://www.postman.com/" },
+    { icon: <SiPrisma />, name: "Prisma", link: "https://www.prisma.io/" },
   ],
 };
+
 const about = {
   title: "About me",
   Description: (
@@ -197,7 +87,7 @@ const about = {
         guide me. Here, I share my journey, interests, aspirations, and the
         experiences that have shaped my identity.
       </p>
-      <p className="para1">
+      <p>
         I am a committed, results-oriented, and enthusiastic individual with a
         solid academic foundation and broad professional experience. My genuine
         passion for software engineering, combined with a proven ability to
@@ -205,53 +95,26 @@ const about = {
         and collaborative approach to a dynamic software engineering program at
         the College of Science and Technology.
       </p>
-      <p className="para2">
-        From the moment I created my first &quot;Hello World&quot; program, I
-        was captivated by the world of coding. As I explored software
-        development further, I became fascinated by how code can provide elegant
-        solutions to complex challenges. It feels like being a digital creator,
-        crafting solutions from imagination.
+      <p>
+        From the moment I created my first "Hello World" program, I was
+        captivated by the world of coding. As I explored software development
+        further, I became fascinated by how code can provide elegant solutions
+        to complex challenges. It feels like being a digital creator, crafting
+        solutions from imagination.
       </p>
     </>
   ),
   info: [
-    {
-      filedName: "Name",
-      filedValue: "Jigme Ngawang Chogyal",
-    },
-    {
-      filedName: "Studies",
-      filedValue: "Bachelor of Engineering in Software Engineering",
-    },
-    {
-      filedName: "Collage",
-      filedValue: "College of Science and Technology",
-    },
-    {
-      filedName: "Address",
-      filedValue: "Thimphu, Bhutan",
-    },
-    {
-      filedName: "Phone Number",
-      filedValue: "+97517992006",
-    },
-    {
-      filedName: "Email",
-      filedValue: "02240344.cst@rub.edu.bt",
-    },
+    { filedName: "Name", filedValue: "Jigme Ngawang Chogyal" },
+    { filedName: "Studies", filedValue: "Bachelor of Engineering in Software Engineering" },
+    { filedName: "Collage", filedValue: "College of Science and Technology" },
+    { filedName: "Address", filedValue: "Thimphu, Bhutan" },
+    { filedName: "Phone Number", filedValue: "+97517992006" },
+    { filedName: "Email", filedValue: "02240344.cst@rub.edu.bt" },
   ],
 };
 
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
-
-import { ScrollArea } from "@/components/ui/scroll-area";
-import { motion } from "framer-motion";
+// ---------------- Component ----------------
 
 const About = () => {
   return (
@@ -275,6 +138,7 @@ const About = () => {
           </TabsList>
 
           <div className="min-h-[70vh] w-full">
+            {/* Skills Tab */}
             <TabsContent value="skills" className="w-full">
               <div className="flex flex-col gap-6 md:gap-[30px]">
                 <div className="flex flex-col gap-4 md:gap-[30px] text-center xl:text-left">
@@ -286,61 +150,63 @@ const About = () => {
                   </p>
                 </div>
                 <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 md:gap-[30px]">
-                  {skills.skilllist.map((skill, index) => {
-                    return (
-                      <li key={index}>
-                        <TooltipProvider delayDuration={100}>
-                          <Tooltip>
-                            <TooltipTrigger className="w-full h-[70px] md:h-[100px] rounded-xl flex justify-center items-center group">
-                              <div className="text-3xl md:text-5xl group-hover:text-purple-900 transition-all duration-300">
+                  {skills.skilllist.map((skill, index) => (
+                    <li key={index}>
+                      <TooltipProvider delayDuration={100}>
+                        <Tooltip>
+                          <TooltipTrigger className="w-full h-[70px] md:h-[100px] rounded-xl flex justify-center items-center group">
+                            <div className="text-3xl md:text-5xl group-hover:text-purple-900 transition-all duration-300">
+                              <a
+                                href={skill.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
                                 {skill.icon}
-                              </div>
-                            </TooltipTrigger>
-                            <TooltipContent>
-                              <p>{skill.name}</p>
-                            </TooltipContent>
-                          </Tooltip>
-                        </TooltipProvider>
-                      </li>
-                    );
-                  })}
+                              </a>
+                            </div>
+                          </TooltipTrigger>
+                          <TooltipContent>
+                            <p>{skill.name}</p>
+                          </TooltipContent>
+                        </Tooltip>
+                      </TooltipProvider>
+                    </li>
+                  ))}
                 </ul>
               </div>
             </TabsContent>
-            <TabsContent
-              value="about"
-              className="w-full text-center xl:text-left"
-            >
-              <div className="flex flex-col gap-6 md:gap-[24px]">
-                <h3 className="text-xl md:text-2xl font-bold text-purple-900">
+
+            {/* About Tab */}
+            <TabsContent value="about" className="w-full text-center xl:text-left">
+              <div className="flex flex-col gap-6 md:gap-[30px]">
+                <h3 className="text-2xl md:text-4xl font-bold text-purple-900">
                   {about.title}
                 </h3>
-                <div className="max-w-full md:max-w-[600px] mx-auto xl:mx-0 text-sm md:text-base text-white/60 font-normal leading-snug font-sans">
+
+                <div className="max-w-full md:max-w-[600px] mx-auto xl:mx-0 text-sm md:text-base text-white/60 font-normal leading-relaxed space-y-4">
                   {about.Description}
                 </div>
+
                 <ul className="grid grid-cols-1 md:grid-cols-2 gap-y-3 md:gap-y-4 max-w-full md:max-w-[620px] mx-auto xl:mx-0">
-                  {about.info.map((item, index) => {
-                    return (
-                      <li
-                        key={index}
-                        className="flex items-center justify-center xl:justify-start gap-2 border-l-4 border-purple-900 pl-3"
-                      >
-                        <span className="text-purple-900 font-semibold text-xs md:text-sm">
-                          {item.filedName}
-                        </span>
-                        <span className="text-xs md:text-sm text-white/80">
-                          {item.filedValue}
-                        </span>
-                      </li>
-                    );
-                  })}
+                  {about.info.map((item, index) => (
+                    <li
+                      key={index}
+                      className="flex items-center justify-center xl:justify-start gap-2 border-l-4 border-purple-900 pl-3 md:pl-4"
+                    >
+                      <span className="text-purple-900 font-semibold text-sm md:text-base">
+                        {item.filedName}
+                      </span>
+                      <span className="text-sm md:text-base text-white/80">
+                        {item.filedValue}
+                      </span>
+                    </li>
+                  ))}
                 </ul>
               </div>
             </TabsContent>
-            <TabsContent
-              value="achievemnt"
-              className="w-full text-center xl:text-left"
-            >
+
+            {/* Achievement Tab */}
+            <TabsContent value="achievemnt" className="w-full text-center xl:text-left">
               <div className="flex flex-col gap-6 md:gap-[30px]">
                 <h3 className="text-2xl md:text-4xl font-bold">
                   {achievemnt.title}
