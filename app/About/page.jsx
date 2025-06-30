@@ -96,7 +96,7 @@ const about = {
         the College of Science and Technology.
       </p>
       <p>
-        From the moment I created my first "Hello World" program, I was
+        From the moment I created my first Hello World program, I was
         captivated by the world of coding. As I explored software development
         further, I became fascinated by how code can provide elegant solutions
         to complex challenges. It feels like being a digital creator, crafting
