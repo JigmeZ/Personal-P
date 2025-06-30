@@ -261,14 +261,14 @@ const About = () => {
         opacity: 1,
         transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
       }}
-      className="min-h-[80vh] flex items-center justify-center py-12 xl:py-0"
+      className="min-h-[80vh] flex items-center justify-center py-6 sm:py-10 md:py-12 xl:py-0 px-2 sm:px-4"
     >
-      <div className="container mx-auto">
+      <div className="container mx-auto px-2 sm:px-4">
         <Tabs
           defaultValue="skills"
-          className="flex flex-col xl:flex-row gap-[60px]"
+          className="flex flex-col xl:flex-row gap-8 md:gap-12 xl:gap-[60px]"
         >
-          <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
+          <TabsList className="flex flex-row xl:flex-col w-full max-w-full xl:max-w-[380px] mx-auto xl:mx-0 gap-2 xl:gap-6">
             <TabsTrigger value="skills">Skills</TabsTrigger>
             <TabsTrigger value="about">About Me</TabsTrigger>
             <TabsTrigger value="achievemnt">Achievement</TabsTrigger>
@@ -276,21 +276,23 @@ const About = () => {
 
           <div className="min-h-[70vh] w-full">
             <TabsContent value="skills" className="w-full">
-              <div className="flex flex-col gap-[30px]">
-                <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                  <h1 className="text-4xl font-bold">{skills.title}</h1>
-                  <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+              <div className="flex flex-col gap-6 md:gap-[30px]">
+                <div className="flex flex-col gap-4 md:gap-[30px] text-center xl:text-left">
+                  <h1 className="text-2xl md:text-4xl font-bold">
+                    {skills.title}
+                  </h1>
+                  <p className="max-w-full md:max-w-[600px] text-white/60 mx-auto xl:mx-0 text-base md:text-lg">
                     {skills.Description}
                   </p>
                 </div>
-                <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:gap-[30px]">
+                <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 md:gap-[30px]">
                   {skills.skilllist.map((skill, index) => {
                     return (
                       <li key={index}>
                         <TooltipProvider delayDuration={100}>
                           <Tooltip>
-                            <TooltipTrigger className="w-full h-[100px] rounded-xl flex justify-center items-center group">
-                              <div className="text-5xl group-hover:text-purple-900 transition-all duration-300">
+                            <TooltipTrigger className="w-full h-[70px] md:h-[100px] rounded-xl flex justify-center items-center group">
+                              <div className="text-3xl md:text-5xl group-hover:text-purple-900 transition-all duration-300">
                                 {skill.icon}
                               </div>
                             </TooltipTrigger>
@@ -309,24 +311,24 @@ const About = () => {
               value="about"
               className="w-full text-center xl:text-left"
             >
-              <div className="flex flex-col gap-[24px]">
-                <h3 className="text-2xl font-bold text-purple-900">
+              <div className="flex flex-col gap-6 md:gap-[24px]">
+                <h3 className="text-xl md:text-2xl font-bold text-purple-900">
                   {about.title}
                 </h3>
-                <div className="max-w-[600px] mx-auto xl:mx-0 text-base text-white/60 font-normal leading-snug font-sans">
+                <div className="max-w-full md:max-w-[600px] mx-auto xl:mx-0 text-sm md:text-base text-white/60 font-normal leading-snug font-sans">
                   {about.Description}
                 </div>
-                <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-4 max-w-[620px] mx-auto xl:mx-0">
+                <ul className="grid grid-cols-1 md:grid-cols-2 gap-y-3 md:gap-y-4 max-w-full md:max-w-[620px] mx-auto xl:mx-0">
                   {about.info.map((item, index) => {
                     return (
                       <li
                         key={index}
                         className="flex items-center justify-center xl:justify-start gap-2 border-l-4 border-purple-900 pl-3"
                       >
-                        <span className="text-purple-900 font-semibold text-sm">
+                        <span className="text-purple-900 font-semibold text-xs md:text-sm">
                           {item.filedName}
                         </span>
-                        <span className="text-sm text-white/80">
+                        <span className="text-xs md:text-sm text-white/80">
                           {item.filedValue}
                         </span>
                       </li>
@@ -339,22 +341,28 @@ const About = () => {
               value="achievemnt"
               className="w-full text-center xl:text-left"
             >
-              <div className="flex flex-col gap-[30px]">
-                <h3 className="text-4xl font-bold">{achievemnt.title}</h3>
-                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+              <div className="flex flex-col gap-6 md:gap-[30px]">
+                <h3 className="text-2xl md:text-4xl font-bold">
+                  {achievemnt.title}
+                </h3>
+                <p className="max-w-full md:max-w-[600px] text-white/60 mx-auto xl:mx-0 text-sm md:text-base">
                   {achievemnt.Description}
                 </p>
-                <ul className="flex flex-col gap-6 max-w-[620px] mx-auto xl:mx-0">
+                <ul className="flex flex-col gap-4 md:gap-6 max-w-full md:max-w-[620px] mx-auto xl:mx-0">
                   {achievemnt.achievemntList.map((item, index) => (
                     <li
                       key={index}
-                      className="flex flex-col items-start gap-2 border-l-4 border-purple-900 pl-4"
+                      className="flex flex-col items-center md:items-start gap-1 md:gap-2 border-l-4 border-purple-900 pl-3 md:pl-4"
                     >
-                      <span className="text-lg font-semibold text-purple-900">
+                      <span className="text-base md:text-lg font-semibold text-purple-900">
                         {item.title}
                       </span>
-                      <span className="text-sm text-white/60">{item.date}</span>
-                      <span className="text-base">{item.description}</span>
+                      <span className="text-xs md:text-sm text-white/60">
+                        {item.date}
+                      </span>
+                      <span className="text-sm md:text-base">
+                        {item.description}
+                      </span>
                     </li>
                   ))}
                 </ul>

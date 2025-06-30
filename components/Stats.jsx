@@ -7,7 +7,6 @@ const statsData = [
     num: 271,
     text: "Code Commited",
   },
-
   {
     num: 12,
     text: "Software Used",
@@ -18,11 +17,11 @@ const Stats = () => {
   return (
     <section>
       <div className="container mx-auto">
-        <div className="flex flex-wrap gap-6 max-w-[88vm] mx-auto xl:max-w-none justify-end">
+        <div className="flex flex-wrap gap-6 max-w-[88vm] mx-auto xl:max-w-none justify-center xl:justify-end">
           {statsData.map((item, index) => {
             return (
               <div
-                className="flex-1 flex gap-4 items-center justify-end xl:justify-end"
+                className="flex-1 flex gap-4 items-center justify-center xl:justify-end"
                 key={index}
               >
                 <CountUp
