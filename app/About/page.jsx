@@ -83,24 +83,13 @@ const about = {
   Description: (
     <>
       <p>
-        Discover more about my background, passions, and the principles that
-        guide me. Here, I share my journey, interests, aspirations, and the
-        experiences that have shaped my identity.
+        Discover more about my background, passions, and the principles that guide me. Here, I share my journey, interests, aspirations, and the experiences that have shaped my identity. 
       </p>
       <p>
-        I am a committed, results-oriented, and enthusiastic individual with a
-        solid academic foundation and broad professional experience. My genuine
-        passion for software engineering, combined with a proven ability to
-        learn and adapt swiftly, drives me to contribute my diverse skill set
-        and collaborative approach to a dynamic software engineering program at
-        the College of Science and Technology.
+        I am a committed, results-oriented, and enthusiastic individual with a solid academic foundation and practical experience in software development. Currently, I am pursuing a Bachelor of Engineering in Software Engineering at the College of Science and Technology. My genuine passion for this field, combined with a strong ability to learn quickly and adapt to new challenges, motivates me to keep growing as a developer.
       </p>
       <p>
-        From the moment I created my first Hello World program, I was
-        captivated by the world of coding. As I explored software development
-        further, I became fascinated by how code can provide elegant solutions
-        to complex challenges. It feels like being a digital creator, crafting
-        solutions from imagination.
+        From the moment I created my first Hello World program, I was captivated by coding. As I explored further, I became fascinated by how code can solve complex problems with simple, elegant solutions. For me, software engineering is more than writing code  it is about creating tools that can positively impact people’s lives and make everyday tasks easier and more efficient. This mindset drives me to continuously build my skills and contribute effectively to any team or project I am part of.  
       </p>
     </>
   ),
