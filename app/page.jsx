@@ -10,11 +10,12 @@ const Home = () => {
     <section className="h-full">
       <div className="container mx-auto h-full px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col-reverse xl:flex-row justify-between xl:pt-8 xl:pb-24">
-          
           <div className="text-center xl:text-left flex flex-col items-center xl:items-start order-none xl:order-1">
             <h1 className="h1">HELLO THERE</h1>
             <h2 className="h2">
-              <span className="text-purple-900">&lt;I am Jigme/&gt;</span>
+              <span className="text-purple-900">
+                &lt;I am Jigme Ngawang Chogyal/&gt;
+              </span>
             </h2>
             <p className="max-w-[500px] mb-9 text-center xl:text-left">
               I am a{" "}
@@ -46,11 +47,10 @@ const Home = () => {
           </div>
 
           <div className="order-1 xl:order-none mb-8 xl:mb-0 flex justify-center xl:justify-end -mt-20">
-            <div className="w-[22rem] h-[22rem] xl:w-[36rem] xl:h-[36rem]"> {/* Much bigger photo size */}
+            <div className="absolute left-20 top-32 w-[260px] h-[260px] sm:left-32 sm:top-40 sm:w-[320px] sm:h-[320px] flex items-center justify-center z-10">
               <Photo />
             </div>
           </div>
-
         </div>
       </div>
     </section>

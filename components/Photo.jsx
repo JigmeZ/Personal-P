@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const Photo = () => {
   return (
-    <div className="w-full h-full relative">
+    <div className="w-full h-full relative flex items-center justify-center">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{
@@ -19,8 +19,7 @@ const Photo = () => {
             opacity: 1,
             transition: { delay: 2, duration: 0.4, ease: "easeIn" },
           }}
-          className="w-[298px] h-[298px] sm:w-[450px] sm:h-[450px]
-        mix-blend-lighten"
+          className="w-[96px] h-[96px] sm:w-[128px] sm:h-[128px] rounded-full overflow-hidden border border-purple-900 shadow-md flex items-center justify-center bg-black"
         >
           <Image
             src="/main.png"
@@ -28,7 +27,7 @@ const Photo = () => {
             quality={100}
             fill
             alt=""
-            className="object-contain"
+            className="object-cover rounded-full"
           />
         </motion.div>
       </motion.div>
