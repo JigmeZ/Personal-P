@@ -10,7 +10,7 @@ const Home = () => {
     <section className="h-full">
       <div className="container mx-auto h-full px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col-reverse xl:flex-row justify-between xl:pt-8 xl:pb-24">
-          <div className="text-center xl:text-left flex flex-col items-center xl:items-start order-none xl:order-1">
+          <div className="text-center xl:text-left flex flex-col items-center xl:items-start order-none xl:order-1 w-full xl:w-auto">
             <h1 className="h1">HELLO THERE</h1>
             <h2 className="h2">
               <span className="text-purple-900">
@@ -24,7 +24,7 @@ const Home = () => {
               <span> challenges and architect solutions.</span>
             </p>
 
-            <div className="flex flex-col sm:flex-row items-center gap-2 mb-8 xl:mb-0">
+            <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-2 mb-6 xl:mb-0 w-full xl:w-auto">
               <a href="/Resume.pdf" target="_blank" rel="noopener noreferrer">
                 <Button
                   className="text-sm py-2 px-4 bg-opacity-50 bg-black-500 border border-purple-950 
@@ -42,12 +42,19 @@ const Home = () => {
                 hover:text-primary hover:transition-all duration-500"
               />
 
-              <Stats className="mt-4 sm:mt-0" />
+              {/* Hide stats on mobile, show inline for sm+ */}
+              <div className="hidden sm:block">
+                <Stats className="mt-4 sm:mt-0" />
+              </div>
+            </div>
+            {/* Show stats below on mobile */}
+            <div className="block sm:hidden w-full mt-4">
+              <Stats />
             </div>
           </div>
 
-          <div className="order-1 xl:order-none mb-8 xl:mb-0 flex justify-center xl:justify-end -mt-20">
-            <div className="absolute left-20 top-32 w-[260px] h-[260px] sm:left-32 sm:top-40 sm:w-[320px] sm:h-[320px] flex items-center justify-center z-10">
+          <div className="order-1 xl:order-none mb-8 xl:mb-0 flex justify-center xl:justify-end -mt-10 sm:-mt-20 w-full xl:w-auto">
+            <div className="relative w-[180px] h-[180px] sm:w-[220px] sm:h-[220px] md:w-[260px] md:h-[260px] xl:absolute xl:left-32 xl:top-44 xl:w-[260px] xl:h-[260px] 2xl:left-40 2xl:top-56 2xl:w-[320px] 2xl:h-[320px] flex items-center justify-center z-10">
               <Photo />
             </div>
           </div>
