@@ -16,12 +16,7 @@ import {
   SiPrisma,
 } from "react-icons/si";
 
-import {
-  Tabs,
-  TabsContent,
-  TabsList,
-  TabsTrigger,
-} from "@/components/ui/tabs";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
   Tooltip,
   TooltipContent,
@@ -31,6 +26,50 @@ import {
 import { motion } from "framer-motion";
 
 // ---------------- Data ----------------
+
+const skills = {
+  title: "My skills",
+  Description:
+    "The skills I’ve learned, ranging from technical expertise to soft skills, showcasing my growth and adaptability over this period",
+  skilllist: [
+    {
+      icon: <FaHtml5 />,
+      name: "Html",
+      link: "https://www.w3schools.com/html/",
+    },
+    {
+      icon: <FaCss3Alt />,
+      name: "CSS",
+      link: "https://www.w3schools.com/css/",
+    },
+    {
+      icon: <FaJs />,
+      name: "Javascript",
+      link: "https://www.w3schools.com/js/",
+    },
+    { icon: <FaNodeJs />, name: "Node.js", link: "https://nodejs.org/en" },
+    { icon: <FaReact />, name: "React.js", link: "https://react.dev/" },
+    {
+      icon: <FaDatabase />,
+      name: "Database",
+      link: "https://www.geeksforgeeks.org/what-is-database/",
+    },
+    {
+      icon: <FaFigma />,
+      name: "Figma",
+      link: "https://www.figma.com/downloads/",
+    },
+    { icon: <FaDocker />, name: "Docker", link: "https://www.docker.com/" },
+    {
+      icon: <SiTailwindcss />,
+      name: "Tailwind.css",
+      link: "https://tailwindcss.com/",
+    },
+    { icon: <SiNextdotjs />, name: "Next.js", link: "https://nextjs.org/" },
+    { icon: <SiPostman />, name: "Postman", link: "https://www.postman.com/" },
+    { icon: <SiPrisma />, name: "Prisma", link: "https://www.prisma.io/" },
+  ],
+};
 
 const achievemnt = {
   title: "My Achievements",
@@ -53,28 +92,38 @@ const achievemnt = {
       title: "Team Lead – HoYoLAB Clone Group Project",
       date: "Feb 2025 – July 2025",
       description:
-        "Led a team of 3 to recreate core HoYoLAB features using React and Vite. Implemented reusable components, managed state, established GitFlow, and deployed the project on Render.com.",
+        "Led a team to recreate core HoYoLAB features using React and Vite. Implemented reusable components, managed state, established GitFlow, and deployed the project on Render.com.",
     },
-  ],
-};
-
-const skills = {
-  title: "My skills",
-  Description:
-    "The skills I’ve learned, ranging from technical expertise to soft skills, showcasing my growth and adaptability over this period",
-  skilllist: [
-    { icon: <FaHtml5 />, name: "Html", link: "https://www.w3schools.com/html/" },
-    { icon: <FaCss3Alt />, name: "CSS", link: "https://www.w3schools.com/css/" },
-    { icon: <FaJs />, name: "Javascript", link: "https://www.w3schools.com/js/" },
-    { icon: <FaNodeJs />, name: "Node.js", link: "https://nodejs.org/en" },
-    { icon: <FaReact />, name: "React.js", link: "https://react.dev/" },
-    { icon: <FaDatabase />, name: "Database", link: "https://www.geeksforgeeks.org/what-is-database/" },
-    { icon: <FaFigma />, name: "Figma", link: "https://www.figma.com/downloads/" },
-    { icon: <FaDocker />, name: "Docker", link: "https://www.docker.com/" },
-    { icon: <SiTailwindcss />, name: "Tailwind.css", link: "https://tailwindcss.com/" },
-    { icon: <SiNextdotjs />, name: "Next.js", link: "https://nextjs.org/" },
-    { icon: <SiPostman />, name: "Postman", link: "https://www.postman.com/" },
-    { icon: <SiPrisma />, name: "Prisma", link: "https://www.prisma.io/" },
+    {
+      title: "Successfully Connected SQL with Fitness Web App",
+      date: "Feb 2025 – July 2025",
+      description:
+        "Integrated SQL database connectivity with a web application called JPP Fitness, enabling dynamic data storage and retrieval for user and workout information.",
+    },
+    {
+      title: "Dzongkha Spell Checker Project",
+      date: "July 2024 – Dec 2024",
+      description:
+        "Developed a Dzongkha spell checker using Python and a Dzongkha dictionary, enabling users to detect and correct spelling errors in Dzongkha text.",
+    },
+    {
+      title: "Cloned Bhutan Times Using Figma (Learning Purpose)",
+      date: "2024",
+      description: (
+        <>
+          Successfully cloned the Bhutan Times website using Figma for learning
+          purposes.{" "}
+          <a
+            href="https://www.figma.com/design/xmPUbM1779mRA9AWAum88C/group-3-PA?node-id=0-1&t=7ubZxThJDM1Ci7vN-1"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline text-purple-400 hover:text-purple-600"
+          >
+            Figma Project
+          </a>
+        </>
+      ),
+    },
   ],
 };
 
@@ -83,20 +132,34 @@ const about = {
   Description: (
     <>
       <p>
-        Discover more about my background, passions, and the principles that guide me. Here, I share my journey, interests, aspirations, and the experiences that have shaped my identity. 
+        Technology has always intrigued me because of its power to transform
+        ideas into reality. Whether its developing a web application that
+        streamlines daily tasks or designing algorithms that solve complex
+        challenges, I find fulfillment in building solutions that matter.
       </p>
       <p>
-        I am a committed, results-oriented, and enthusiastic individual with a solid academic foundation and practical experience in software development. Currently, I am pursuing a Bachelor of Engineering in Software Engineering at the College of Science and Technology. My genuine passion for this field, combined with a strong ability to learn quickly and adapt to new challenges, motivates me to keep growing as a developer.
+        Beyond my academic journey, I actively engage in projects and activities
+        that expand my perspective. Working on collaborative coding assignments,
+        participating in hackathons, and exploring personal side projects have
+        strengthened my problem-solving skills and taught me the value of
+        teamwork, resilience, and continuous learning.
       </p>
       <p>
-        From the moment I created my first Hello World program, I was captivated by coding. As I explored further, I became fascinated by how code can solve complex problems with simple, elegant solutions. For me, software engineering is more than writing code  it is about creating tools that can positively impact people’s lives and make everyday tasks easier and more efficient. This mindset drives me to continuously build my skills and contribute effectively to any team or project I am part of.  
+        Looking forward, I aspire to become a software engineer who not only
+        writes efficient code but also understands user needs deeply to create
+        impactful digital experiences. I am determined to keep learning,
+        refining my craft, and contributing to meaningful innovations that
+        empower communities and shape a better future.
       </p>
     </>
   ),
   info: [
     { filedName: "Name", filedValue: "Jigme Ngawang Chogyal" },
-    { filedName: "Studies", filedValue: "Bachelor of Engineering in Software Engineering" },
-    { filedName: "Collage", filedValue: "College of Science and Technology" },
+    {
+      filedName: "Studies",
+      filedValue: "Bachelor of Engineering in Software Engineering",
+    },
+    { filedName: "College", filedValue: "College of Science and Technology" },
     { filedName: "Address", filedValue: "Thimphu, Bhutan" },
     { filedName: "Phone Number", filedValue: "+97517992006" },
     { filedName: "Email", filedValue: "02240344.cst@rub.edu.bt" },
@@ -166,13 +229,16 @@ const About = () => {
             </TabsContent>
 
             {/* About Tab */}
-            <TabsContent value="about" className="w-full text-center xl:text-left">
+            <TabsContent
+              value="about"
+              className="w-full text-center xl:text-left"
+            >
               <div className="flex flex-col gap-6 md:gap-[30px]">
-                <h3 className="text-2xl md:text-4xl font-bold text-purple-900">
+                <h3 className="text-2xl md:text-4xl font-bold text-white">
                   {about.title}
                 </h3>
 
-                <div className="max-w-full md:max-w-[600px] mx-auto xl:mx-0 text-sm md:text-base text-white/60 font-normal leading-relaxed space-y-4">
+                <div className="max-w-full md:max-w-[600px] mx-auto xl:mx-0 text-[10px] md:text-xs text-white/60 font-normal leading-relaxed space-y-4">
                   {about.Description}
                 </div>
 
@@ -195,12 +261,15 @@ const About = () => {
             </TabsContent>
 
             {/* Achievement Tab */}
-            <TabsContent value="achievemnt" className="w-full text-center xl:text-left">
+            <TabsContent
+              value="achievemnt"
+              className="w-full text-center xl:text-left"
+            >
               <div className="flex flex-col gap-6 md:gap-[30px]">
                 <h3 className="text-2xl md:text-4xl font-bold">
                   {achievemnt.title}
                 </h3>
-                <p className="max-w-full md:max-w-[600px] text-white/60 mx-auto xl:mx-0 text-sm md:text-base">
+                <p className="max-w-full md:max-w-[600px] text-white/60 mx-auto xl:mx-0 text-base md:text-lg">
                   {achievemnt.Description}
                 </p>
                 <ul className="flex flex-col gap-4 md:gap-6 max-w-full md:max-w-[620px] mx-auto xl:mx-0">
