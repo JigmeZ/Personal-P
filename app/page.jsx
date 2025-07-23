@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { FiDownload } from "react-icons/fi";
@@ -11,6 +13,43 @@ const Home = () => {
       <div className="container mx-auto h-full px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col-reverse xl:flex-row justify-between xl:pt-8 xl:pb-24">
           <div className="text-center xl:text-left flex flex-col items-center xl:items-start order-none xl:order-1 w-full xl:w-auto">
+            {/* Loader Animation from Uiverse.io */}
+            <div className="flex justify-center items-center mb-6">
+              <div className="loader" />
+              <style jsx>{`
+                .loader {
+                  width: 45px;
+                  height: 40px;
+                  background: linear-gradient(
+                      #0000 calc(1 * 100% / 6),
+                      #fff 0 calc(3 * 100% / 6),
+                      #0000 0
+                    ),
+                    linear-gradient(
+                      #0000 calc(2 * 100% / 6),
+                      #fff 0 calc(4 * 100% / 6),
+                      #0000 0
+                    ),
+                    linear-gradient(
+                      #0000 calc(3 * 100% / 6),
+                      #fff 0 calc(5 * 100% / 6),
+                      #0000 0
+                    );
+                  background-size: 10px 400%;
+                  background-repeat: no-repeat;
+                  animation: matrix 1s infinite linear;
+                }
+                @keyframes matrix {
+                  0% {
+                    background-position: 0% 100%, 50% 100%, 100% 100%;
+                  }
+                  100% {
+                    background-position: 0% 0%, 50% 0%, 100% 0%;
+                  }
+                }
+              `}</style>
+            </div>
+
             <h1 className="h1">HELLO THERE</h1>
             <h2 className="h2">
               <span className="text-purple-900">
@@ -19,9 +58,10 @@ const Home = () => {
             </h2>
             <p className="max-w-[500px] mb-9 text-center xl:text-left">
               I am a{" "}
-              <span className="text-purple-900">Software Engineering</span>{" "}
-              student that welcomes
-              <span> challenges and architect solutions.</span>
+              <span className="text-purple-900">
+                Software Engineering student
+              </span>
+              {" that welcomes challenges and architects solutions."}
             </p>
 
             <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-2 mb-6 xl:mb-0 w-full xl:w-auto">
@@ -46,10 +86,10 @@ const Home = () => {
               <div className="hidden sm:block">
                 <Stats className="mt-4 sm:mt-0" />
               </div>
-            </div>
-            {/* Show stats below on mobile */}
-            <div className="block sm:hidden w-full mt-4">
-              <Stats />
+              {/* Show stats below on mobile */}
+              <div className="block sm:hidden w-full mt-4">
+                <Stats />
+              </div>
             </div>
           </div>
 

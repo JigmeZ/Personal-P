@@ -27,50 +27,6 @@ import { motion } from "framer-motion";
 
 // ---------------- Data ----------------
 
-const skills = {
-  title: "My skills",
-  Description:
-    "The skills I’ve learned, ranging from technical expertise to soft skills, showcasing my growth and adaptability over this period",
-  skilllist: [
-    {
-      icon: <FaHtml5 />,
-      name: "Html",
-      link: "https://www.w3schools.com/html/",
-    },
-    {
-      icon: <FaCss3Alt />,
-      name: "CSS",
-      link: "https://www.w3schools.com/css/",
-    },
-    {
-      icon: <FaJs />,
-      name: "Javascript",
-      link: "https://www.w3schools.com/js/",
-    },
-    { icon: <FaNodeJs />, name: "Node.js", link: "https://nodejs.org/en" },
-    { icon: <FaReact />, name: "React.js", link: "https://react.dev/" },
-    {
-      icon: <FaDatabase />,
-      name: "Database",
-      link: "https://www.geeksforgeeks.org/what-is-database/",
-    },
-    {
-      icon: <FaFigma />,
-      name: "Figma",
-      link: "https://www.figma.com/downloads/",
-    },
-    { icon: <FaDocker />, name: "Docker", link: "https://www.docker.com/" },
-    {
-      icon: <SiTailwindcss />,
-      name: "Tailwind.css",
-      link: "https://tailwindcss.com/",
-    },
-    { icon: <SiNextdotjs />, name: "Next.js", link: "https://nextjs.org/" },
-    { icon: <SiPostman />, name: "Postman", link: "https://www.postman.com/" },
-    { icon: <SiPrisma />, name: "Prisma", link: "https://www.prisma.io/" },
-  ],
-};
-
 const achievemnt = {
   title: "My Achievements",
   Description:
@@ -127,13 +83,57 @@ const achievemnt = {
   ],
 };
 
+const skills = {
+  title: "My skills",
+  Description:
+    "The skills I’ve learned, ranging from technical expertise to soft skills, showcasing my growth and adaptability over this period",
+  skilllist: [
+    {
+      icon: <FaHtml5 />,
+      name: "Html",
+      link: "https://www.w3schools.com/html/",
+    },
+    {
+      icon: <FaCss3Alt />,
+      name: "CSS",
+      link: "https://www.w3schools.com/css/",
+    },
+    {
+      icon: <FaJs />,
+      name: "Javascript",
+      link: "https://www.w3schools.com/js/",
+    },
+    { icon: <FaNodeJs />, name: "Node.js", link: "https://nodejs.org/en" },
+    { icon: <FaReact />, name: "React.js", link: "https://react.dev/" },
+    {
+      icon: <FaDatabase />,
+      name: "Database",
+      link: "https://www.geeksforgeeks.org/what-is-database/",
+    },
+    {
+      icon: <FaFigma />,
+      name: "Figma",
+      link: "https://www.figma.com/downloads/",
+    },
+    { icon: <FaDocker />, name: "Docker", link: "https://www.docker.com/" },
+    {
+      icon: <SiTailwindcss />,
+      name: "Tailwind.css",
+      link: "https://tailwindcss.com/",
+    },
+    { icon: <SiNextdotjs />, name: "Next.js", link: "https://nextjs.org/" },
+    { icon: <SiPostman />, name: "Postman", link: "https://www.postman.com/" },
+    { icon: <SiPrisma />, name: "Prisma", link: "https://www.prisma.io/" },
+  ],
+};
+
 const about = {
   title: "About me",
   Description: (
     <>
       <p>
         Technology has always intrigued me because of its power to transform
-        ideas into reality. Whether its developing a web application that
+        ideas into reality. Whether it&#39;s developing a web application that
         streamlines daily tasks or designing algorithms that solve complex
         challenges, I find fulfillment in building solutions that matter.
       </p>
@@ -159,7 +159,7 @@ const about = {
       filedName: "Studies",
       filedValue: "Bachelor of Engineering in Software Engineering",
     },
-    { filedName: "College", filedValue: "College of Science and Technology" },
+    { filedName: "Collage", filedValue: "College of Science and Technology" },
     { filedName: "Address", filedValue: "Thimphu, Bhutan" },
     { filedName: "Phone Number", filedValue: "+97517992006" },
     { filedName: "Email", filedValue: "02240344.cst@rub.edu.bt" },
@@ -234,12 +234,15 @@ const About = () => {
               className="w-full text-center xl:text-left"
             >
               <div className="flex flex-col gap-6 md:gap-[30px]">
-                <h3 className="text-2xl md:text-4xl font-bold text-white">
+                <h3 className="text-2xl md:text-4xl font-bold text-purple-900">
                   {about.title}
                 </h3>
 
-                <div className="max-w-full md:max-w-[600px] mx-auto xl:mx-0 text-[10px] md:text-xs text-white/60 font-normal leading-relaxed space-y-4">
-                  {about.Description}
+                <div className="max-w-full md:max-w-[600px] mx-auto xl:mx-0 text-sm md:text-base text-white/60 font-normal leading-relaxed space-y-4">
+                  {/* Changed font for paragraphs */}
+                  <div className="space-y-4 font-serif">
+                    {about.Description}
+                  </div>
                 </div>
 
                 <ul className="grid grid-cols-1 md:grid-cols-2 gap-y-3 md:gap-y-4 max-w-full md:max-w-[620px] mx-auto xl:mx-0">
@@ -269,7 +272,7 @@ const About = () => {
                 <h3 className="text-2xl md:text-4xl font-bold">
                   {achievemnt.title}
                 </h3>
-                <p className="max-w-full md:max-w-[600px] text-white/60 mx-auto xl:mx-0 text-base md:text-lg">
+                <p className="max-w-full md:max-w-[600px] text-white/60 mx-auto xl:mx-0 text-sm md:text-base">
                   {achievemnt.Description}
                 </p>
                 <ul className="flex flex-col gap-4 md:gap-6 max-w-full md:max-w-[620px] mx-auto xl:mx-0">
