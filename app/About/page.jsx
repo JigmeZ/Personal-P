@@ -179,6 +179,129 @@ const About = () => {
       className="min-h-[80vh] flex items-center justify-center py-6 sm:py-10 md:py-12 xl:py-0 px-2 sm:px-4"
     >
       <div className="container mx-auto px-2 sm:px-4">
+        {/* Loader Start */}
+        <div className="loader">
+          <div className="wrapper">
+            <div className="catContainer">
+              {/* Cat from the back, tail wiggling */}
+              <svg className="tail" viewBox="0 0 30 80">
+                <path
+                  d="M15 10 Q10 40 20 70"
+                  stroke="#fff"
+                  strokeWidth="6"
+                  fill="none"
+                  strokeLinecap="round"
+                />
+              </svg>
+              <svg className="catbody" viewBox="0 0 80 80">
+                {/* Back of the cat: body, legs, ears */}
+                {/* Body */}
+                <ellipse cx="40" cy="50" rx="28" ry="24" fill="#fff" />
+                {/* Left leg */}
+                <ellipse cx="28" cy="72" rx="7" ry="6" fill="#fff" />
+                {/* Right leg */}
+                <ellipse cx="52" cy="72" rx="7" ry="6" fill="#fff" />
+                {/* Left ear */}
+                <polygon points="22,32 32,18 36,38" fill="#fff" />
+                {/* Right ear */}
+                <polygon points="58,18 68,32 44,38" fill="#fff" />
+                {/* Butt spot */}
+                <ellipse cx="40" cy="62" rx="3" ry="2" fill="#e0e0e0" />
+              </svg>
+              <div className="text">
+                <span className="zzz">z</span>
+                <span className="bigzzz">Z</span>
+                <span className="zzz">z</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <style jsx>{`
+          /* From Uiverse.io by vinodjangid07 */
+          .loader {
+            width: fit-content;
+            height: fit-content;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+          .wrapper {
+            width: fit-content;
+            height: fit-content;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+          }
+          .catContainer {
+            width: 120px;
+            height: 90px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            position: relative;
+          }
+          .catbody {
+            width: 100px;
+            height: 80px;
+            z-index: 2;
+            position: relative;
+          }
+          .tail {
+            position: absolute;
+            width: 30px;
+            height: 56px;
+            top: 57px;
+            left: 34px;
+            z-index: 1;
+            animation: tail-wiggle 0.7s ease-in-out infinite alternate;
+            transform-origin: 15px 10px;
+          }
+          @keyframes tail-wiggle {
+            0% {
+              transform: rotateZ(30deg);
+            }
+            100% {
+              transform: rotateZ(-30deg);
+            }
+          }
+          .wall {
+            width: 300px;
+          }
+          .text {
+            display: flex;
+            flex-direction: column;
+            width: 50px;
+            position: absolute;
+            margin: 0px 0px 100px 120px;
+          }
+          .zzz {
+            color: #fff;
+            font-weight: 700;
+            font-size: 15px;
+            animation: zzz 2s linear infinite;
+          }
+          .bigzzz {
+            color: #fff;
+            font-weight: 700;
+            font-size: 25px;
+            margin-left: 10px;
+            animation: zzz 2.3s linear infinite;
+          }
+          @keyframes zzz {
+            0% {
+              color: transparent;
+            }
+            50% {
+              color: #fff;
+            }
+            100% {
+              color: transparent;
+            }
+          }
+        `}</style>
+        {/* Loader End */}
+
         <Tabs
           defaultValue="skills"
           className="flex flex-col xl:flex-row gap-8 md:gap-12 xl:gap-[60px]"
