@@ -27,11 +27,11 @@ import { motion } from "framer-motion";
 
 // ---------------- Data ----------------
 
-const achievemnt = {
+const achievement = {
   title: "My Achievements",
   Description:
     "A collection of my achievements, showcasing my dedication and accomplishments in various fields over the past two years.",
-  achievemntList: [
+  achievementList: [
     {
       title: "Vice President, Changjiji Youth Center (CYC)",
       date: "Jan 2023 – Dec 2024",
@@ -65,20 +65,9 @@ const achievemnt = {
     {
       title: "Cloned Bhutan Times Using Figma (Learning Purpose)",
       date: "2024",
-      description: (
-        <>
-          Successfully cloned the Bhutan Times website using Figma for learning
-          purposes.{" "}
-          <a
-            href="https://www.figma.com/design/xmPUbM1779mRA9AWAum88C/group-3-PA?node-id=0-1&t=7ubZxThJDM1Ci7vN-1"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline text-purple-400 hover:text-purple-600"
-          >
-            Figma Project
-          </a>
-        </>
-      ),
+      description:
+        "Successfully cloned the Bhutan Times website using Figma for learning purposes.",
+      link: "https://www.figma.com/design/xmPUbM1779mRA9AWAum88C/group-3-PA?node-id=0-1&t=7ubZxThJDM1Ci7vN-1",
     },
   ],
 };
@@ -131,26 +120,106 @@ const about = {
   title: "About me",
   Description: (
     <>
-      <p>
-        Technology has always intrigued me because of its power to transform
-        ideas into reality. Whether it&#39;s developing a web application that
-        streamlines daily tasks or designing algorithms that solve complex
-        challenges, I find fulfillment in building solutions that matter.
+      <p className="text-center text-white/80 text-sm mb-4">
+        I am a passionate developer who loves building beautiful interfaces,
+        robust backends, and exploring the world of cyber security. I enjoy
+        learning new technologies and solving real-world problems through code.
       </p>
-      <p>
-        Beyond my academic journey, I actively engage in projects and activities
-        that expand my perspective. Working on collaborative coding assignments,
-        participating in hackathons, and exploring personal side projects have
-        strengthened my problem-solving skills and taught me the value of
-        teamwork, resilience, and continuous learning.
-      </p>
-      <p>
-        Looking forward, I aspire to become a software engineer who not only
-        writes efficient code but also understands user needs deeply to create
-        impactful digital experiences. I am determined to keep learning,
-        refining my craft, and contributing to meaningful innovations that
-        empower communities and shape a better future.
-      </p>
+      <div className="flex flex-col md:flex-row gap-4 justify-center items-stretch">
+        {/* Frontend Developer Card */}
+        <div className="flex-1 min-w-[220px] max-w-xs bg-gradient-to-br from-purple-600/90 to-purple-900/90 rounded-xl p-4 shadow-md border border-purple-700 mx-auto">
+          <div className="flex flex-col items-center gap-1">
+            <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center mb-1 shadow">
+              <span role="img" aria-label="frontend" className="text-xl">
+                👾
+              </span>
+            </div>
+            <h3 className="text-base font-bold text-white mb-1 tracking-wide">
+              Frontend Dev
+            </h3>
+            <p className="text-purple-100 text-center text-xs mb-2">
+              Clean code, user-focused design, responsive & accessible UI.
+            </p>
+            <div className="mb-1">
+              <span className="font-semibold text-yellow-200 text-xs">
+                Design:
+              </span>
+              <span className="text-yellow-100 text-xs"> UX, UI, Web</span>
+            </div>
+            <div>
+              <span className="font-semibold text-yellow-200 text-xs">
+                Tools:
+              </span>
+              <span className="text-purple-100 text-xs">
+                {" "}
+                Figma, React, Next.js
+              </span>
+            </div>
+          </div>
+        </div>
+        {/* Backend Developer Card */}
+        <div className="flex-1 min-w-[220px] max-w-xs bg-gradient-to-br from-blue-600/90 to-blue-900/90 rounded-xl p-4 shadow-md border border-blue-700 mx-auto">
+          <div className="flex flex-col items-center gap-1">
+            <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center mb-1 shadow">
+              <span role="img" aria-label="backend" className="text-xl">
+                💻
+              </span>
+            </div>
+            <h3 className="text-base font-bold text-white mb-1 tracking-wide">
+              Backend Dev
+            </h3>
+            <p className="text-blue-100 text-center text-xs mb-2">
+              APIs, databases, secure & scalable server logic.
+            </p>
+            <div className="mb-1">
+              <span className="font-semibold text-yellow-200 text-xs">
+                Lang:
+              </span>
+              <span className="text-yellow-100 text-xs"> Node.js, Python</span>
+            </div>
+            <div>
+              <span className="font-semibold text-yellow-200 text-xs">
+                Tools:
+              </span>
+              <span className="text-blue-100 text-xs">
+                {" "}
+                PostgreSQL, Postman
+              </span>
+            </div>
+          </div>
+        </div>
+        {/* Cyber Security Card */}
+        <div className="flex-1 min-w-[220px] max-w-xs bg-gradient-to-br from-green-600/90 to-green-900/90 rounded-xl p-4 shadow-md border border-green-700 mx-auto">
+          <div className="flex flex-col items-center gap-1">
+            <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center mb-1 shadow">
+              <span role="img" aria-label="cybersecurity" className="text-xl">
+                🛡️
+              </span>
+            </div>
+            <h3 className="text-base font-bold text-white mb-1 tracking-wide">
+              Cyber Security
+            </h3>
+            <p className="text-green-100 text-center text-xs mb-2">
+              Ethical hacking, CTFs, digital safety awareness.
+            </p>
+            <div className="mb-1">
+              <span className="font-semibold text-yellow-200 text-xs">
+                Focus:
+              </span>
+              <span className="text-yellow-100 text-xs">
+                {" "}
+                Network, Vuln. Assess.
+              </span>
+            </div>
+            <div>
+              <span className="font-semibold text-yellow-200 text-xs">
+                Tools:
+              </span>
+              <span className="text-green-100 text-xs"> Kali, Nmap, THM</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </>
   ),
   info: [
@@ -179,129 +248,6 @@ const About = () => {
       className="min-h-[80vh] flex items-center justify-center py-6 sm:py-10 md:py-12 xl:py-0 px-2 sm:px-4"
     >
       <div className="container mx-auto px-2 sm:px-4">
-        {/* Loader Start */}
-        <div className="loader">
-          <div className="wrapper">
-            <div className="catContainer">
-              {/* Cat from the back, tail wiggling */}
-              <svg className="tail" viewBox="0 0 30 80">
-                <path
-                  d="M15 10 Q10 40 20 70"
-                  stroke="#fff"
-                  strokeWidth="6"
-                  fill="none"
-                  strokeLinecap="round"
-                />
-              </svg>
-              <svg className="catbody" viewBox="0 0 80 80">
-                {/* Back of the cat: body, legs, ears */}
-                {/* Body */}
-                <ellipse cx="40" cy="50" rx="28" ry="24" fill="#fff" />
-                {/* Left leg */}
-                <ellipse cx="28" cy="72" rx="7" ry="6" fill="#fff" />
-                {/* Right leg */}
-                <ellipse cx="52" cy="72" rx="7" ry="6" fill="#fff" />
-                {/* Left ear */}
-                <polygon points="22,32 32,18 36,38" fill="#fff" />
-                {/* Right ear */}
-                <polygon points="58,18 68,32 44,38" fill="#fff" />
-                {/* Butt spot */}
-                <ellipse cx="40" cy="62" rx="3" ry="2" fill="#e0e0e0" />
-              </svg>
-              <div className="text">
-                <span className="zzz">z</span>
-                <span className="bigzzz">Z</span>
-                <span className="zzz">z</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <style jsx>{`
-          /* From Uiverse.io by vinodjangid07 */
-          .loader {
-            width: fit-content;
-            height: fit-content;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-          }
-          .wrapper {
-            width: fit-content;
-            height: fit-content;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-          }
-          .catContainer {
-            width: 120px;
-            height: 90px;
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-            position: relative;
-          }
-          .catbody {
-            width: 100px;
-            height: 80px;
-            z-index: 2;
-            position: relative;
-          }
-          .tail {
-            position: absolute;
-            width: 30px;
-            height: 56px;
-            top: 57px;
-            left: 34px;
-            z-index: 1;
-            animation: tail-wiggle 0.7s ease-in-out infinite alternate;
-            transform-origin: 15px 10px;
-          }
-          @keyframes tail-wiggle {
-            0% {
-              transform: rotateZ(30deg);
-            }
-            100% {
-              transform: rotateZ(-30deg);
-            }
-          }
-          .wall {
-            width: 300px;
-          }
-          .text {
-            display: flex;
-            flex-direction: column;
-            width: 50px;
-            position: absolute;
-            margin: 0px 0px 100px 120px;
-          }
-          .zzz {
-            color: #fff;
-            font-weight: 700;
-            font-size: 15px;
-            animation: zzz 2s linear infinite;
-          }
-          .bigzzz {
-            color: #fff;
-            font-weight: 700;
-            font-size: 25px;
-            margin-left: 10px;
-            animation: zzz 2.3s linear infinite;
-          }
-          @keyframes zzz {
-            0% {
-              color: transparent;
-            }
-            50% {
-              color: #fff;
-            }
-            100% {
-              color: transparent;
-            }
-          }
-        `}</style>
-        {/* Loader End */}
-
         <Tabs
           defaultValue="skills"
           className="flex flex-col xl:flex-row gap-8 md:gap-12 xl:gap-[60px]"
@@ -309,7 +255,7 @@ const About = () => {
           <TabsList className="flex flex-row xl:flex-col w-full max-w-full xl:max-w-[380px] mx-auto xl:mx-0 gap-2 xl:gap-6">
             <TabsTrigger value="skills">Skills</TabsTrigger>
             <TabsTrigger value="about">About Me</TabsTrigger>
-            <TabsTrigger value="achievemnt">Achievement</TabsTrigger>
+            <TabsTrigger value="achievement">Achievement</TabsTrigger>
           </TabsList>
 
           <div className="min-h-[70vh] w-full">
@@ -360,14 +306,11 @@ const About = () => {
                 <h3 className="text-2xl md:text-4xl font-bold text-purple-900">
                   {about.title}
                 </h3>
-
                 <div className="max-w-full md:max-w-[600px] mx-auto xl:mx-0 text-sm md:text-base text-white/60 font-normal leading-relaxed space-y-4">
-                  {/* Changed font for paragraphs */}
                   <div className="space-y-4 font-serif">
                     {about.Description}
                   </div>
                 </div>
-
                 <ul className="grid grid-cols-1 md:grid-cols-2 gap-y-3 md:gap-y-4 max-w-full md:max-w-[620px] mx-auto xl:mx-0">
                   {about.info.map((item, index) => (
                     <li
@@ -388,18 +331,18 @@ const About = () => {
 
             {/* Achievement Tab */}
             <TabsContent
-              value="achievemnt"
+              value="achievement"
               className="w-full text-center xl:text-left"
             >
               <div className="flex flex-col gap-6 md:gap-[30px]">
                 <h3 className="text-2xl md:text-4xl font-bold">
-                  {achievemnt.title}
+                  {achievement.title}
                 </h3>
                 <p className="max-w-full md:max-w-[600px] text-white/60 mx-auto xl:mx-0 text-sm md:text-base">
-                  {achievemnt.Description}
+                  {achievement.Description}
                 </p>
                 <ul className="flex flex-col gap-4 md:gap-6 max-w-full md:max-w-[620px] mx-auto xl:mx-0">
-                  {achievemnt.achievemntList.map((item, index) => (
+                  {achievement.achievementList.map((item, index) => (
                     <li
                       key={index}
                       className="flex flex-col items-center md:items-start gap-1 md:gap-2 border-l-4 border-purple-900 pl-3 md:pl-4"
@@ -410,8 +353,18 @@ const About = () => {
                       <span className="text-xs md:text-sm text-white/60">
                         {item.date}
                       </span>
-                      <span className="text-sm md:text-base">
+                      <span className="text-sm md:text-base text-white/80">
                         {item.description}
+                        {item.link && (
+                          <a
+                            href={item.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="ml-1 underline text-purple-400 hover:text-purple-600"
+                          >
+                            [View Project]
+                          </a>
+                        )}
                       </span>
                     </li>
                   ))}
